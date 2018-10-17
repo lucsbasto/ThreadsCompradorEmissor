@@ -3,9 +3,9 @@
 void preencher();
 void emitir();
 void comprar();
-//void poltronas();
+void poltronas();
 
-pthread_mutex_t mutex=PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 int i;
 int j;
 int cont = 1;
@@ -99,7 +99,6 @@ void poltronas(){
 	}
 	
 	printf("Comprador 1 - %d	||		Comprador 2 - %d\n", thread_1, thread_2);
-	printf("%s", ingressos);
 	puts("");
 }
 
