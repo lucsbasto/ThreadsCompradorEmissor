@@ -17,15 +17,10 @@ int main(){
     pthread_create(&emissor, 0, emitir, NULL);
     pthread_create(&comprador1, 0, comprar, '2');
     pthread_create(&comprador2, 0, comprar, '3');
-    printf("antes");
     pthread_join(comprador1, 0);
     pthread_join(comprador2, 0);
-	printf("depois");
 	poltronas();
-	
-
 }
-
 
 void comprar(char *t){
 	while(cont){
@@ -97,7 +92,6 @@ void poltronas(){
 			thread_2++;
 		}
 	}
-	
 	printf("Comprador 1 - %d	||		Comprador 2 - %d\n", thread_1, thread_2);
 	puts("");
 }
